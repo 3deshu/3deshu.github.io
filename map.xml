@@ -1,0 +1,41 @@
+﻿<krpano>
+	
+
+<layer name="map" visible="true" url="map.png" state="closed" align="topleft" y="3%" x="3%" scale="1" alpha="0" keep="true" handcursor="false" capture="false" width="prop" height="80%">
+ 
+ <!-- Маска для радара - контейнер -->
+ <layer name="radarmask" type="container" align="lefttop" width="100%" height="100%" maskchildren="true" visible="true" keep="false" >
+
+ <!-- Точки -->
+ 
+
+
+ <layer name="DDDDDDDh" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="75%" y="18%" zorder="2" onclick="loadscene(scene_vanna, null, MERGE, BLEND(1)); tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ <layer name="spot2" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="80%" y="30%" zorder="2" onclick="loadscene(scene_prihojaya, null, MERGE, BLEND(1));tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ <layer name="spot3" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="22%" y="30%" zorder="2" onclick="loadscene(scene_kuhnya, null, MERGE, BLEND(1));tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ <layer name="spot4" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="50%" y="50%" zorder="2" onclick="loadscene(scene_GOSTINNAYA, null, MERGE, BLEND(1));tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ <layer name="spot5" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="23%" y="78%" zorder="2" onclick="loadscene(scene_SPALNYA, null, MERGE, BLEND(1));tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ <layer name="spot6" url="vtourskin_mapspot.png" scale="0.5" align="lefttop" edge="bottom" x="70%" y="79%" zorder="2" onclick="loadscene(scene_DETSKAYA, null, MERGE, BLEND(1));tween(layer[map].alpha ,0.0)" onhover="showtext(Textstyle DEFAULT);" keep="true" />
+ 
+ </layer>
+</layer>
+
+<layer name="map_button_close" title="карта" url="knopka.jpg" keep="true" align="lefttop" 
+ onover="tween(scale, 0.4, 0.2, easeInOutSine)"
+ onout="tween(scale, 0.3, 0.65, easeOutBounce)"
+ onclick="tween(layer[map].scale, 1);tween(layer[map].alpha ,0.0); set(layer[map_button_open].visible, true);set(visible, false);delayedcall(0.3, set(layer[map_container].visible, false, WAIT));" 
+  x="3%" y="5%" scale="0.3" alpha="1" /> 
+ 
+ <layer name="map_button_open" url="knopka.jpg" keep="true" align="lefttop" 
+ onover="tween(scale, 0.4, 0.2, easeInOutSine)"
+ onout="tween(scale, 0.3, 0.65, easeOutBounce)"
+ onclick="tween(layer[map].scale, 1); tween(layer[map].alpha ,1); set(layer[map].visible, true); set(layer[map_button_close].visible, true); set(visible, false); delayedcall(0.3, set(layer[map_container].visible, false, WAIT));" 
+  x="3%" y="5%" scale="0.3" alpha="1.0" visible="true" /> 
+
+
+</krpano>

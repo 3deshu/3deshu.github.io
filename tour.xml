@@ -113,7 +113,7 @@
        onover="tween(alpha, 1, 0.2), tween(scale, 0.3)"
        onhover=""
        onout="tween(alpha, 0.4), tween(scale, 0.2)"
-       onclick="openurl('http://light-ds.com');"
+       onclick="tween(scale, 0.3, 0.5, easeInElastic); tween(scale, 0.2, 0.1, easeInElastic); openurl('http://ecograd03.ru');"
        ondown=""
        onup=""
        onloaded=""
